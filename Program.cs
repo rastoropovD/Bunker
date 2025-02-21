@@ -1,7 +1,14 @@
+using BunkerApp.Controllers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services
+    .AddScoped<ScopedExample>()
+    .AddTransient<TransientExample>()
+    .AddSingleton<SingletonExample>();
 
 var app = builder.Build();
 
