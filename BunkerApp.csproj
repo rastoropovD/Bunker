@@ -4,9 +4,76 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <Configurations>Development;Staging</Configurations>
+        <Platforms>AnyCPU</Platforms>
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="BunkerApp.Application\**" />
+      <Compile Remove="BunkerApp.Domain\**" />
+      <Compile Remove="BunkerApp.OpenAiApi\**" />
+      <Compile Remove="BunkerApp.Persistence\**" />
+      <Compile Remove="DbMigrator\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="BunkerApp.Application\**" />
+      <EmbeddedResource Remove="BunkerApp.Domain\**" />
+      <EmbeddedResource Remove="BunkerApp.OpenAiApi\**" />
+      <EmbeddedResource Remove="BunkerApp.Persistence\**" />
+      <EmbeddedResource Remove="DbMigrator\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="BunkerApp.Application\**" />
+      <Content Remove="BunkerApp.Domain\**" />
+      <Content Remove="BunkerApp.OpenAiApi\**" />
+      <Content Remove="BunkerApp.Persistence\**" />
+      <Content Remove="DbMigrator\**" />
+      <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+      <Content Update="appsettings.Staging.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="BunkerApp.Application\**" />
+      <None Remove="BunkerApp.Domain\**" />
+      <None Remove="BunkerApp.OpenAiApi\**" />
+      <None Remove="BunkerApp.Persistence\**" />
+      <None Remove="DbMigrator\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="BunkerApp.Application\bin\Debug\net9.0\BunkerApp.Application.deps.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Application\obj\BunkerApp.Application.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Application\obj\Debug\net9.0\BunkerApp.Application.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Application\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Application\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Domain\bin\Debug\net9.0\BunkerApp.Domain.deps.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Domain\obj\BunkerApp.Domain.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Domain\obj\Debug\net9.0\BunkerApp.Domain.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Domain\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Domain\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\bin\Debug\net9.0\BunkerApp.OpenAiApi.deps.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\BunkerApp.OpenAiApi.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\Debug\net9.0\BunkerApp.OpenAiApi.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Persistence\bin\Debug\net9.0\BunkerApp.Persistence.deps.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Persistence\obj\BunkerApp.Persistence.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Persistence\obj\Debug\net9.0\BunkerApp.Persistence.sourcelink.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Persistence\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="BunkerApp.Persistence\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="DbMigrator\obj\DbMigrator.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="DbMigrator\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="DbMigrator\obj\project.packagespec.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="BunkerApp.Application\BunkerApp.Application.csproj" />
       <ProjectReference Include="BunkerApp.Persistence\BunkerApp.Persistence.csproj" />
     </ItemGroup>
 

@@ -1,7 +1,14 @@
+using BunkerApp.Application;
+using BunkerApp.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder
+    .Services
+    .InstallDb(builder.Configuration.GetConnectionString("BunkerDbConnection")!)
+    .InstallApplication();
 
 var app = builder.Build();
 
