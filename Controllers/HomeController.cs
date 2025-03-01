@@ -37,6 +37,7 @@ public class HomeController : Controller
     private readonly ScopedExample _scopedExample1;
     private readonly TransientExample _transientExample1;
     private readonly SingletonExample _singletonExample1;
+    
     private readonly ScopedExample _scopedExample2;
     private readonly TransientExample _transientExample2;
     private readonly SingletonExample _singletonExample2;
@@ -68,6 +69,10 @@ public class HomeController : Controller
         
         string transient1 = _transientExample1.GetData();
         string transient2 = _transientExample2.GetData();
+        
+        bool singletone = singletone1 == singletone2; // true
+        bool transient = transient1 == transient2; // true
+        bool scoped = scoped1 == scoped2; // false
         
         return View();
     }
