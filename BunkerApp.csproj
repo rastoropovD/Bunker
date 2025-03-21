@@ -11,6 +11,7 @@
       <Compile Remove="BunkerApp.Application\**" />
       <Compile Remove="BunkerApp.Domain\**" />
       <Compile Remove="BunkerApp.OpenAiApi\**" />
+      <Compile Remove="build\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -18,6 +19,7 @@
       <EmbeddedResource Remove="BunkerApp.Application\**" />
       <EmbeddedResource Remove="BunkerApp.Domain\**" />
       <EmbeddedResource Remove="BunkerApp.OpenAiApi\**" />
+      <EmbeddedResource Remove="build\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -25,6 +27,7 @@
       <Content Remove="BunkerApp.Application\**" />
       <Content Remove="BunkerApp.Domain\**" />
       <Content Remove="BunkerApp.OpenAiApi\**" />
+      <Content Remove="build\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -32,6 +35,7 @@
       <None Remove="BunkerApp.Application\**" />
       <None Remove="BunkerApp.Domain\**" />
       <None Remove="BunkerApp.OpenAiApi\**" />
+      <None Remove="build\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -55,6 +59,9 @@
       <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\Debug\net9.0\BunkerApp.OpenAiApi.sourcelink.json" />
       <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\project.assets.json" />
       <_ContentIncludedByDefault Remove="BunkerApp.OpenAiApi\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="build\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="build\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="build\obj\_build.csproj.nuget.dgspec.json" />
     </ItemGroup>
 
 </Project>
