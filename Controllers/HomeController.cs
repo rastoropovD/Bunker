@@ -15,6 +15,15 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        object? message = TempData.Peek("Message");
+        
+        if (message == null)
+        {
+            TempData["Message"] = "Welcome to Bunker!";
+        } 
+        
+        string? messageStr = message as string;
+        
         return View();
     }
 

@@ -1,0 +1,44 @@
+@model BunkerApp.Models.User.CreateUserModel
+
+@{
+    ViewBag.Title = "Create User";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h2>Create User</h2>
+    <form asp-controller="CreateUser" asp-action="Index" method="post" class="row">
+        <div class="col-8">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { type = "email", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control">
+                <span asp-validation-for="FirstName" class="field-validation-error"></span>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.LastName)
+                @Html.TextBoxFor(m => m.LastName, new {@class="form-control"})
+                @Html.ValidationMessageFor(m => m.LastName)
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+        @* <div asp-validation-summary="None" class="col-4 field-validation-error"></div> *@
+        @* <div asp-validation-summary="ModelOnly" class="col-4 field-validation-error"></div> *@
+        <div asp-validation-summary="All" class="col-4 field-validation-error"></div>
+            
+        @* <div class="col-4"> *@
+        @*     @Html.ValidationSummary("Errors", new {@class="field-validation-error"}) *@
+        @* </div> *@
+    </form>
+</div>
+@* *@
+@* @section Scripts{ *@
+@*     @{ *@
+@*         <partial name="_ValidationScriptsPartial" /> *@
+@*     } *@
+@* } *@
