@@ -1,7 +1,14 @@
+using BunkerApp.Controllers;
+using BunkerApp.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<TestConfigModel>(builder.Configuration.GetSection("SomeData"));
+
+builder.Services.AddSingleton<TestSingle>();
 
 var app = builder.Build();
 
