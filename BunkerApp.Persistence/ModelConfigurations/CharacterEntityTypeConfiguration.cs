@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BunkerApp.Persistence.ModelConfigurations;
 
-public sealed class GameEntityTypeConfiguration : IEntityTypeConfiguration<GameEntity>
+public sealed class CharacterEntityTypeConfiguration : IEntityTypeConfiguration<Character>
 {
-    public void Configure(EntityTypeBuilder<GameEntity> builder)
+    public void Configure(EntityTypeBuilder<Character> builder)
     {
-        
+        builder.HasKey(c => c.Id);
     }
 }

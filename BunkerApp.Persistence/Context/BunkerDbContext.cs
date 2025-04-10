@@ -7,7 +7,13 @@ namespace BunkerApp.Persistence;
 
 public sealed class BunkerDbContext : DbContext
 {
-    public DbSet<PlayerEntity> Players { get; set; }
+    public DbSet<Player> Players { get; set; }
+    public DbSet<GameSession> GameSessions { get; set; }
+    public DbSet<GamePlayer> GamePlayers { get; set; }
+    public DbSet<Character> Characters { get; set; }
+    public DbSet<Disaster> Disasters { get; set; }
+    public DbSet<Vote> Votes { get; set; }
+    public DbSet<GameLog> GameLogs { get; set; }
 
     public BunkerDbContext(DbContextOptions<BunkerDbContext> options) : base(options)
     {
