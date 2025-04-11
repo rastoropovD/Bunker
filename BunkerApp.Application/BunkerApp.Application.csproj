@@ -13,6 +13,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Commands\" />
+      <Folder Include="Queries\" />
       <Folder Include="Repositories\" />
     </ItemGroup>
 

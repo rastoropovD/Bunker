@@ -12,4 +12,12 @@
       <ProjectReference Include="..\BunkerApp.Application\BunkerApp.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="OpenAI-DotNet" Version="8.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Disaster\" />
+    </ItemGroup>
+
 </Project>
